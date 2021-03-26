@@ -18,7 +18,12 @@ h1 {
     font-size: 3em;
 }
 
-div {
+.hide {
+    display: none;
+}
+
+.questions {
+    display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
