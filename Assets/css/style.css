@@ -7,27 +7,51 @@
 
 body {
     background-color: rgb(167, 236, 227);
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     display: flex;
     justify-content: center;
+    margin-bottom: 2%;
 }
 
 h1 {
     font-size: 3em;
 }
 
-.hide {
-    display: none;
+.timer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.questions {
+.timer h2 {
+    margin: 0 auto;
+}
+
+.timer h3{
+    margin: 0 auto;
+}
+
+.startRules {
+    display: flex;
+    flex-direction: column;
+    margin: 1% auto;
+    
+}
+.startBtn {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.box {
     display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5% auto;
+    margin: 2% auto;
     width: 40%;
     background-color: rgb(243, 243, 243);
     border-radius: 10px;
@@ -35,15 +59,14 @@ h1 {
     box-shadow: 2px 2px #000000;
 }
 
+.hide {
+    display: none;
+}
+
 p{
     margin: 4vh 0;
 }
 
-ol {
-    list-style: upper-alpha;
-}
-
-li {
-    margin: 10% 0;
-
+h4 {
+    margin: 0 auto;
 }
