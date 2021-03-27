@@ -1,4 +1,4 @@
-var question = document.querySelector('p');
+var question = document.querySelector('.question');
 var answerA = document.querySelector('#answerA');
 var answerB = document.querySelector('#answerB');
 var answerC = document.querySelector('#answerC');
@@ -12,7 +12,8 @@ var startRules = document.querySelector('.startRules');
 var userBox = document.querySelector('.userBox');
 var userInput = document.querySelector('.userInput');
 var scoreInput = document.querySelector('.scoreInput');
-var storageShow = document.querySelector('.storageShow');
+var userScore = document.querySelector('.userScore');
+var storageShow = document.querySelector('.storageShow')
 var score = 0;
 startBtn.addEventListener('click', start); 
 
@@ -32,6 +33,11 @@ function timer() {
 };
 
 
+function back() {
+    userScore.classList.add('hide')
+    startRules.classList.remove('hide')
+}
+
 function start() {
     container.classList.remove('hide');
     startRules.classList.add('hide');
@@ -42,43 +48,43 @@ function start() {
 
 function questionMaker(x) {
     if (x === 1) {   
-        question.innerHTML = `Question 1`;
-        answerA.innerHTML = `<button onclick="checkAnswer(true, 'Question 1'), questionMaker(2)">1</button>`;
-        answerB.innerHTML = `<button onclick="checkAnswer(false, 'Question 1'), questionMaker(2)">2</button>`;
-        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 1'), questionMaker(2)">3</button>`;
-        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 1'), questionMaker(2)">4</button>`;
+        question.innerHTML = `A ____ is a chunk of code that can be used over and over.`;
+        answerA.innerHTML = `<button onclick="checkAnswer(true, 'Question 1'), questionMaker(2)">Function</button>`;
+        answerB.innerHTML = `<button onclick="checkAnswer(false, 'Question 1'), questionMaker(2)">Boolean</button>`;
+        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 1'), questionMaker(2)">HTML</button>`;
+        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 1'), questionMaker(2)">Computer</button>`;
     };
     
     if (x === 2) {
-        question.innerHTML = `Question 2`;
-        answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 2'), questionMaker(3)">5</button>`;
-        answerB.innerHTML = `<button onclick="checkAnswer(true, 'Question 2'), questionMaker(3)">6</button>`;
-        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 2'), questionMaker(3)">7</button>`;
-        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 2'), questionMaker(3)">8</button>`;
+        question.innerHTML = `____ is a language used to style an website.`;
+        answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 2'), questionMaker(3)">HTML</button>`;
+        answerB.innerHTML = `<button onclick="checkAnswer(true, 'Question 2'), questionMaker(3)">CSS</button>`;
+        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 2'), questionMaker(3)">JavaScript</button>`;
+        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 2'), questionMaker(3)">Crayons</button>`;
     };
     
     if (x === 3) {
-        question.innerHTML = `Question 3`;
-        answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 3'), questionMaker(4)">5</button>`;
-        answerB.innerHTML = `<button onclick="checkAnswer(true, 'Question 3'), questionMaker(4)">6</button>`;
-        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 3'), questionMaker(4)">7</button>`;
-        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 3'), questionMaker(4)">8</button>`;
+        question.innerHTML = `____ is a type of loop.`;
+        answerA.innerHTML = `<button onclick="checkAnswer(true, 'Question 3'), questionMaker(4)">for</button>`;
+        answerB.innerHTML = `<button onclick="checkAnswer(false, 'Question 3'), questionMaker(4)">if</button>`;
+        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 3'), questionMaker(4)">else</button>`;
+        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 3'), questionMaker(4)">array</button>`;
     };
     
     if (x === 4) {
-        question.innerHTML = `Question 4`;
-        answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">5</button>`;
-        answerB.innerHTML = `<button onclick="checkAnswer(true, 'Question 4'), questionMaker(5)">6</button>`;
-        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">7</button>`;
-        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">8</button>`;
+        question.innerHTML = `Which element is the largest heading?`;
+        answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">h4</button>`;
+        answerB.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">h3</button>`;
+        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">h2</button>`;
+        answerD.innerHTML = `<button onclick="checkAnswer(true, 'Question 4'), questionMaker(5)">h1</button>`;
     };
     
     if (x === 5) {
-        question.innerHTML = `Question 5`;
-        answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 5')">5</button>`;
-        answerB.innerHTML = `<button onclick="checkAnswer(true, 'Question 5')">6</button>`;
-        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 5')">7</button>`;
-        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 5')">8</button>`;
+        question.innerHTML = `____ can only be used once unlike class.`;
+        answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 5'), gameOver()">div</button>`;
+        answerB.innerHTML = `<button onclick="checkAnswer(false, 'Question 5'), gameOver()">onclick</button>`;
+        answerC.innerHTML = `<button onclick="checkAnswer(true, 'Question 5'), gameOver()">id</button>`;
+        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 5'), gameOver()">string</button>`;
     };
 };
 
@@ -90,9 +96,9 @@ function checkAnswer(choice, questionNum) {
     } else {
         correct.innerHTML = `${questionNum} Wrong!`;
         time -= 5
-    
     };
 };
+
 
 function gameOver() {
     container.classList.add('hide');
@@ -103,16 +109,24 @@ function gameOver() {
 };
 
 
-function storeUser(e) {
-    e.preventDefault();
-    
-    var user = {
+function storeUser() {
+
+    var highScore = {
         score: score,
         name: userInput.value
     }
-    console.log(`name: ${user.name} score: ${user.score}`);
-    localStorage.setItem('player', JSON.stringify(user));
-
+    
+    console.log(`name: ${highScore.name} score: ${highScore.score}`);
+    localStorage.setItem('player', JSON.stringify(highScore));
+    
     var getInfo = JSON.parse(localStorage.getItem('player'));
-    storageShow.innerHTML = `Name: ${player.name} Score: ${player.score}`
+    storageShow.innerHTML = `Name: ${highScore.name} Score: ${highScore.score}`  
+}
+
+
+function showScore() {
+    userScore.classList.remove('hide')
+    startRules.classList.add('hide')
+    var getInfo = JSON.parse(localStorage.getItem('player'));
+    storageShow.innerHTML = `Name: ${getInfo.name} Score: ${getInfo.score}`
 }
