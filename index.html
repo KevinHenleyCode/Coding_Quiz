@@ -12,18 +12,42 @@
         <h1>Coding Quiz</h1>
     </header>
 
-    <button class="startBtn">Start</button>
-
-
-    <div class="container hide">
-        <div class="questions">
+    <section class="timer hide">
+        <h2>Time Left</h2>
+        <h3></h3>
+    </section>
+    
+    <section class="startRules">
+        <p>Here are the instructions</p>
+        <button class="startBtn">Start</button>
+    </section>
+        
+    <main class="container hide">
+        <section class="box">
             <p>Question</p>
-            <button onclick="checkAnswer()" class="answer" data-correct="true">Answer</button>
-            <button onclick="checkAnswer()" class="answer" data-correct="">Answer</button>
-            <button onclick="checkAnswer()" class="answer" data-correct="">Answer</button>
-            <button onclick="checkAnswer()" class="answer" data-correct="">Answer</button>
-        </div>
-    </div>
+            <div id="answerA"></div>
+            <div id="answerB"></div>
+            <div id="answerC"></div>
+            <div id="answerD"></div>
+        </section>
+    </main>
+    
+    <h4></h4>
+
+    <section class="box hide userBox">
+        <h2>Game Over!</h2>
+        <p>please add your name and we will keep your score</p>
+        <h3 class="scoreInput"></h3>
+        <form>
+            <input class="userInput" type="text" name="Username" placeholder="Username">
+            <button onclick="storeUser(e)">Submit</button>
+        </form>
+    </section>
+
+    <section class="box">
+        <h2>User Info</h2>
+        <h3 class="storageShow"></h3>
+    </section>
     
     <script src="Assets/js/script.js"></script>
 </body>
