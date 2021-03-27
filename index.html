@@ -20,11 +20,12 @@
     <section class="startRules">
         <p>Here are the instructions</p>
         <button class="startBtn">Start</button>
+        <button onclick="showScore()" class="highScoreBtn">HighScore</button>
     </section>
         
     <main class="container hide">
         <section class="box">
-            <p>Question</p>
+            <p class="question"></p>
             <div id="answerA"></div>
             <div id="answerB"></div>
             <div id="answerC"></div>
@@ -34,19 +35,20 @@
     
     <h4></h4>
 
-    <section class="box hide userBox">
+    <section class="box userBox hide">
         <h2>Game Over!</h2>
         <p>please add your name and we will keep your score</p>
         <h3 class="scoreInput"></h3>
         <form>
             <input class="userInput" type="text" name="Username" placeholder="Username">
-            <button onclick="storeUser(e)">Submit</button>
+            <button onclick="storeUser()">Submit</button>
         </form>
     </section>
 
-    <section class="box">
+    <section class="box hide userScore">
         <h2>User Info</h2>
         <h3 class="storageShow"></h3>
+        <button onclick="back()" class="backBtn">Back</button>
     </section>
     
     <script src="Assets/js/script.js"></script>
