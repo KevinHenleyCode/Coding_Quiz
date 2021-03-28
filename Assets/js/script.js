@@ -13,31 +13,31 @@ var userBox = document.querySelector('.userBox');
 var userInput = document.querySelector('.userInput');
 var scoreInput = document.querySelector('.scoreInput');
 var userScore = document.querySelector('.userScore');
-var storageName = document.querySelector('.storageName')
-var storageScore = document.querySelector('.storageScore')
+var storageName = document.querySelector('.storageName');
+var storageScore = document.querySelector('.storageScore');
 var score = 0;
 startBtn.addEventListener('click', start); 
 
 
 var time = 60;
 function timer() {
-    timerHide.classList.remove('hide')
+    timerHide.classList.remove('hide');
     
     setInterval(() => {
             time --;
             timeLeft.innerHTML = time;
             
             if (time <= 0) {
-                gameOver()
+                gameOver();
             };
         }, 1000);
 };
 
 
 function back() {
-    userScore.classList.add('hide')
-    startRules.classList.remove('hide')
-}
+    userScore.classList.add('hide');
+    startRules.classList.remove('hide');
+};
 
 function start() {
     container.classList.remove('hide');
@@ -57,9 +57,9 @@ function questionMaker(x) {
     };
     
     if (x === 2) {
-        question.innerHTML = `____ is a language used to style an website.`;
+        question.innerHTML = `____ is used to select an element.`;
         answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 2'), questionMaker(3)">HTML</button>`;
-        answerB.innerHTML = `<button onclick="checkAnswer(true, 'Question 2'), questionMaker(3)">CSS</button>`;
+        answerB.innerHTML = `<button onclick="checkAnswer(true, 'Question 2'), questionMaker(3)">quereySelector</button>`;
         answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 2'), questionMaker(3)">JavaScript</button>`;
         answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 2'), questionMaker(3)">Crayons</button>`;
     };
@@ -73,19 +73,19 @@ function questionMaker(x) {
     };
     
     if (x === 4) {
-        question.innerHTML = `Which element is the largest heading?`;
+        question.innerHTML = `Which stores multiple items?`;
         answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">h4</button>`;
-        answerB.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">h3</button>`;
-        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">h2</button>`;
-        answerD.innerHTML = `<button onclick="checkAnswer(true, 'Question 4'), questionMaker(5)">h1</button>`;
+        answerB.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">if</button>`;
+        answerC.innerHTML = `<button onclick="checkAnswer(false, 'Question 4'), questionMaker(5)">function</button>`;
+        answerD.innerHTML = `<button onclick="checkAnswer(true, 'Question 4'), questionMaker(5)">array</button>`;
     };
     
     if (x === 5) {
-        question.innerHTML = `____ can only be used once unlike class.`;
-        answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 5'), gameOver()">div</button>`;
-        answerB.innerHTML = `<button onclick="checkAnswer(false, 'Question 5'), gameOver()">onclick</button>`;
-        answerC.innerHTML = `<button onclick="checkAnswer(true, 'Question 5'), gameOver()">id</button>`;
-        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 5'), gameOver()">string</button>`;
+        question.innerHTML = `____ will initialize a variable.`;
+        answerA.innerHTML = `<button onclick="checkAnswer(false, 'Question 5'), gameOver()">echo</button>`;
+        answerB.innerHTML = `<button onclick="checkAnswer(false, 'Question 5'), gameOver()">bubble</button>`;
+        answerC.innerHTML = `<button onclick="checkAnswer(true, 'Question 5'), gameOver()">var</button>`;
+        answerD.innerHTML = `<button onclick="checkAnswer(false, 'Question 5'), gameOver()">initialize</button>`;
     };
 };
 
@@ -115,17 +115,17 @@ function storeUser() {
     var highScore = {
         score: score,
         name: userInput.value
-    }
+    };
     
     console.log(`name: ${highScore.name} score: ${highScore.score}`);
     localStorage.setItem('player', JSON.stringify(highScore));  
-}
+};
 
 
 function showScore() {
-    userScore.classList.remove('hide')
-    startRules.classList.add('hide')
+    userScore.classList.remove('hide');
+    startRules.classList.add('hide');
     var getInfo = JSON.parse(localStorage.getItem('player'));
-    storageName.innerHTML = `Name: <br> ${getInfo.name}`
-    storageScore.innerHTML = `Score: <br> ${getInfo.score}`
-}
+    storageName.innerHTML = `Name: <br> ${getInfo.name}`;
+    storageScore.innerHTML = `Score: <br> ${getInfo.score}`;
+};
