@@ -3,13 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family:monospace;
+    color: #000000;
 }
 
+
 body {
-    background-color: rgb(167, 236, 227);
+    background-color: #0B2D32;
     display: flex;
     flex-direction: column;
 }
+
 
 header {
     display: flex;
@@ -17,9 +20,11 @@ header {
     margin-bottom: 2%;
 }
 
-h1 {
+header h1 {
+    color: #85FFC7;
     font-size: 3em;
 }
+
 
 .timer {
     margin: 0 auto;
@@ -28,12 +33,15 @@ h1 {
 }
 
 .timer h2 {
+    color: #FFB400;
     margin: 0 auto;
 }
 
 .timer h3{
+    color: #FFB400;
     margin: 0 auto;
 }
+
 
 .startRules {
     display: flex;
@@ -41,14 +49,36 @@ h1 {
     margin: 1% auto;
     
 }
+
+.startRules p {
+    color: #c3c8c9;
+    font-size: large;
+    margin: 2% auto;
+    width: 20%;
+}
+
 .startBtn {
-    width: 50%;
-    margin: 5% auto;
+    background-color: #FFB400;
+    border-radius: 4px;
+    width: 5%;
+    margin: 1% auto;
+}
+
+.startBtn:hover {
+    cursor: pointer;
+    background-color: #F6511D;
 }
 
 .highScoreBtn {
-    width: 50%;
-    margin: 5% auto;
+    background-color: #FFB400;
+    border-radius: 4px;
+    width: 5%;
+    margin: 1% auto;
+}
+
+.highScoreBtn:hover {
+    cursor: pointer;
+    background-color: #F6511D;
 }
 
 .backBtn {
@@ -60,23 +90,111 @@ h1 {
     display: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin: 2% auto;
     width: 40%;
-    background-color: rgb(243, 243, 243);
+    background-color: #468C98;
     border-radius: 10px;
     padding: 1%;
-    box-shadow: 2px 2px #000000;
+    box-shadow: 2px 2px #3d4b4b;
+}
+
+.container p {
+    color: #c3c8c9;
+    font-size: large;
+    margin-bottom: 2%;
+}
+
+.container div {
+    margin-top: 1%;
+}
+
+.container button {
+    background-color: #FFB400;
+    padding: 2%;
+    border-radius: 4px;
+    box-shadow: 1px 2px #2b4242;
+}
+
+.container button:hover {
+    cursor: pointer;
+    background-color: #F6511D;
+    box-shadow: 1px 2px #0f1818;
+}
+
+
+h4 {
+    color: #85FFC7;
+    font-size: large;
+    margin: 0 auto;
+}
+
+
+.userBox h2 {
+    color: #FFB400;
+    font-size: 3em;
+    margin-bottom: 2%;
+}
+
+.userBox p {
+    color: #c3c8c9;
+    font-size: large;
+    margin-bottom: 4%;
+}
+
+.userBox h3 {
+    color: #FFB400;
+    font-size: 2em;
+    margin-bottom: 2%;
+}
+
+.userBox input {
+    background-color: #c3c8c9;
+    margin-bottom: 3%;
+}
+
+.userBox button {
+    background-color: #FFB400;
+    border-radius: 4px;
+    box-shadow: 1px 2px #2b4242;
+}
+
+.userBox button:hover {
+    cursor: pointer;
+    background-color: #F6511D;
+    box-shadow: 1px 2px #494949;
+}
+
+
+.userScore h2 {
+    color: #85FFC7;
+    font-size: 3em;
+    margin-bottom: 2%;
+}
+
+.userScore h3 {
+    color: #FFB400;
+    font-size: 2em;
+    margin-bottom: 2%;
+}
+
+.userScore h3::first-line {
+    color: #000000;
+    font-size: 1em;
+}
+
+.userScore button {
+    background-color: #FFB400;
+    border-radius: 4px;
+    box-shadow: 1px 2px #2b4242;
+}
+
+.userScore button:hover {
+    cursor: pointer;
+    background-color: #F6511D;
+    box-shadow: 1px 2px #494949;
 }
 
 .hide {
     display: none;
-}
-
-p{
-    margin: 4vh 0;
-}
-
-h4 {
-    margin: 0 auto;
 }
