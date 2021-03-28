@@ -162,6 +162,7 @@ h4 {
 .userBox input {
     background-color: #c3c8c9;
     margin-bottom: 3%;
+    width: 100px;
 }
 
 .userBox button {
