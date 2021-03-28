@@ -13,12 +13,13 @@ var userBox = document.querySelector('.userBox');
 var userInput = document.querySelector('.userInput');
 var scoreInput = document.querySelector('.scoreInput');
 var userScore = document.querySelector('.userScore');
-var storageShow = document.querySelector('.storageShow')
+var storageName = document.querySelector('.storageName')
+var storageScore = document.querySelector('.storageScore')
 var score = 0;
 startBtn.addEventListener('click', start); 
 
 
-var time = 100;
+var time = 60;
 function timer() {
     timerHide.classList.remove('hide')
     
@@ -95,7 +96,7 @@ function checkAnswer(choice, questionNum) {
         correct.innerHTML = `${questionNum} Correct!`;
     } else {
         correct.innerHTML = `${questionNum} Wrong!`;
-        time -= 5
+        time -= 10
     };
 };
 
@@ -117,10 +118,7 @@ function storeUser() {
     }
     
     console.log(`name: ${highScore.name} score: ${highScore.score}`);
-    localStorage.setItem('player', JSON.stringify(highScore));
-    
-    var getInfo = JSON.parse(localStorage.getItem('player'));
-    storageShow.innerHTML = `Name: ${highScore.name} Score: ${highScore.score}`  
+    localStorage.setItem('player', JSON.stringify(highScore));  
 }
 
 
@@ -128,5 +126,6 @@ function showScore() {
     userScore.classList.remove('hide')
     startRules.classList.add('hide')
     var getInfo = JSON.parse(localStorage.getItem('player'));
-    storageShow.innerHTML = `Name: ${getInfo.name} Score: ${getInfo.score}`
+    storageName.innerHTML = `Name: <br> ${getInfo.name}`
+    storageScore.innerHTML = `Score: <br> ${getInfo.score}`
 }
