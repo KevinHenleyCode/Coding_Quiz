@@ -58,14 +58,14 @@ header h1 {
 .startRules p {
     color: #c3c8c9;
     font-size: large;
-    margin: 2% auto;
-    width: 20%;
+    margin: 8% auto;
+    width: 60vw;
 }
 
 .startBtn {
     background-color: #FFB400;
     border-radius: 4px;
-    width: 5%;
+    width: 60px;
     margin: 1% auto;
 }
 
@@ -77,7 +77,7 @@ header h1 {
 .highScoreBtn {
     background-color: #FFB400;
     border-radius: 4px;
-    width: 5%;
+    width: 90px;
     margin: 1% auto;
 }
 
@@ -115,12 +115,12 @@ header h1 {
 }
 
 .container div {
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .container button {
     background-color: #FFB400;
-    padding: 2%;
+    padding: 3%;
     border-radius: 4px;
     box-shadow: 1px 2px #2b4242;
 }
@@ -142,8 +142,8 @@ h4 {
 
 /* styles the user input and score */
 .userBox h2 {
-    color: #FFB400;
-    font-size: 3em;
+    color: #00ff73;
+    font-size: 2em;
     margin-bottom: 2%;
 }
 
@@ -167,6 +167,7 @@ h4 {
 .userBox button {
     background-color: #FFB400;
     border-radius: 4px;
+    padding: 1%;
     box-shadow: 1px 2px #2b4242;
 }
 
@@ -180,7 +181,7 @@ h4 {
 /* styles the userScore area */
 .userScore h2 {
     color: #85FFC7;
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 2%;
 }
 
@@ -198,6 +199,7 @@ h4 {
 .userScore button {
     background-color: #FFB400;
     border-radius: 4px;
+    width: 50px;
     box-shadow: 1px 2px #2b4242;
 }
 
