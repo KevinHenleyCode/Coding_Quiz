@@ -1,3 +1,4 @@
+// uses querySelectors to select the elements
 var question = document.querySelector('.question');
 var answerA = document.querySelector('#answerA');
 var answerB = document.querySelector('#answerB');
@@ -19,6 +20,8 @@ var score = 0;
 startBtn.addEventListener('click', start); 
 
 
+/* sets the timer for 60 seconds and if the 
+timer runs out it will trigger the gameover function */
 var time = 60;
 function timer() {
     timerHide.classList.remove('hide');
@@ -34,11 +37,14 @@ function timer() {
 };
 
 
+// this powers the back button to hide the userScore and show the startRules
 function back() {
     userScore.classList.add('hide');
     startRules.classList.remove('hide');
 };
 
+
+// starts the timer and gives the questionMaker the argument of 1
 function start() {
     container.classList.remove('hide');
     startRules.classList.add('hide');
@@ -47,6 +53,7 @@ function start() {
 };
 
 
+/* adds questions to the html and passes back arguments to the function to trigger the next question */
 function questionMaker(x) {
     if (x === 1) {   
         question.innerHTML = `A ____ is a chunk of code that can be used over and over.`;
@@ -90,6 +97,7 @@ function questionMaker(x) {
 };
 
 
+// checks to see if the button that was pushed is true or false
 function checkAnswer(choice, questionNum) {
     if (choice === true) {
         score ++;
@@ -101,6 +109,7 @@ function checkAnswer(choice, questionNum) {
 };
 
 
+// adds and removes the hide class and adds the score to the scoreInput
 function gameOver() {
     container.classList.add('hide');
     timerHide.classList.add('hide');
@@ -110,8 +119,8 @@ function gameOver() {
 };
 
 
+// adds object with the user input and score to the localStorage
 function storeUser() {
-
     var highScore = {
         score: score,
         name: userInput.value
@@ -122,6 +131,7 @@ function storeUser() {
 };
 
 
+// adds the name and score to the h3 elements to show in  highScore
 function showScore() {
     userScore.classList.remove('hide');
     startRules.classList.add('hide');

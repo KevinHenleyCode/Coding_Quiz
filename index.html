@@ -8,15 +8,19 @@
     <title>Coding Quiz</title>
 </head>
 <body>
+
+    <!-- adds Coding Quiz to the top of the page -->
     <header>
         <h1>Coding Quiz</h1>
     </header>
 
+    <!-- gives a class that the JavaScript can select -->
     <section class="timer hide">
         <h2>Time Left</h2>
         <h3></h3>
     </section>
     
+    <!-- adds a Start and a highScore button -->
     <section class="startRules">
         <p>Welcome to the Coding Quiz! <br> <br> 
             Press the Start button to get going. Once started you will have 
@@ -28,6 +32,7 @@
         <button onclick="showScore()" class="highScoreBtn">HighScore</button>
     </section>
         
+    <!-- has all of the empty divs to hold the buttons -->
     <main class="container hide">
         <section class="box">
             <p class="question"></p>
@@ -38,8 +43,10 @@
         </section>
     </main>
     
+    <!-- is where the result for the last question will be printed -->
     <h4></h4>
 
+    <!-- will take in the users name -->
     <section class="box userBox hide">
         <h2>Game Over!</h2>
         <p>please add your name and we will keep your score</p>
@@ -50,6 +57,7 @@
         </form>
     </section>
 
+    <!-- shows the last user's name and highScore -->
     <section class="box hide userScore">
         <h2>HighScore</h2>
         <h3 class="storageName"></h3>
