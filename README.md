@@ -23,6 +23,6 @@
 <br>
 
 ## Link
-[page](https://kevinhenleycode.github.io/homework_week_4/)
+[page](https://kevinhenleycode.github.io/Coding_Quiz/)
 <br>
 <br>
