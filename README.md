@@ -1,4 +1,4 @@
-# homework_week_4
+# Coding Quiz
 <br>
 
 ## Objective
